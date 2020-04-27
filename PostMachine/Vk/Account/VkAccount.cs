@@ -11,7 +11,7 @@ namespace PostMachine
         // TODO:
         // Сохранение аккаунтов
         // Выгрузка аккаунтов
-        private static List<VkAccount> Accounts = new List<VkAccount>();
+        public static List<VkAccount> Accounts { get; private set; } = new List<VkAccount>();
         // ID который будет присвоен след. аккаунту
         // TODO: Выгружать данные о нем при включении софта
         // TODO: Сохранять данные о нем при создании аккаунта
