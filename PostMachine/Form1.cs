@@ -28,7 +28,7 @@ namespace PostMachine
                 thread.Start(i);
             }
         }
-
+         
         private void button2_Click(object sender, EventArgs e)
         {
 
