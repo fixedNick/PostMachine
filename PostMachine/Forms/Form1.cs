@@ -44,5 +44,12 @@ namespace PostMachine
             itemForm.Show();
             this.Enabled = false;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Forms.AddGroupForm groupForm = new Forms.AddGroupForm();
+            groupForm.Show();
+            this.Enabled = false;
+        }
     }
 }
