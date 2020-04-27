@@ -37,5 +37,10 @@ namespace PostMachine
             addAccountForm.Show();
             this.Enabled = false;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
