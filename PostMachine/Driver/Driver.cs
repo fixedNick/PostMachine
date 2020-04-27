@@ -21,7 +21,7 @@ namespace PostMachine
         public static void Start(object thrID)
         {
             var threadId = (int)thrID;
-            for (int i = threadId; i < VkAccount.Accounts.Count - 1; i += Form1.ThreadCount)
+            for (int i = threadId; i < VkAccount.Accounts.Count; i += Form1.ThreadCount)
                 StartNewDriver(i, VkAccount.Accounts[i]);
         }
 

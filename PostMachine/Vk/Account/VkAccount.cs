@@ -23,11 +23,15 @@ namespace PostMachine
         public Int32 id { get; private set; } = -1;
         private List<Item> Items = new List<Item>();
 
-        public VkAccount(string login, string password)
+        public VkAccount() { }
+
+        public static void AddAccount(string login, string password)
         {
-            this.Login = login; 
-            this.Password = password;
-            this.id = CurrentAvailableID++;
+            VkAccount account = new VkAccount();
+            account.Login = login;
+            account.Password = password;
+            account.id = CurrentAvailableID++;
+            Accounts.Add(account);
         }
     }
 }

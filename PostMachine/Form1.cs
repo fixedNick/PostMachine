@@ -8,12 +8,14 @@ namespace PostMachine
 {
     public partial class Form1 : Form
     {
+        public static Form1 mainForm;
 
         public static Int32 ThreadCount { get; private set; }
         private static List<Thread> Threads = new List<Thread>();
         public Form1()
         {
             InitializeComponent();
+            mainForm = this;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,7 +33,9 @@ namespace PostMachine
          
         private void button2_Click(object sender, EventArgs e)
         {
-
+            AddAccountForm addAccountForm = new AddAccountForm();
+            addAccountForm.Show();
+            this.Enabled = false;
         }
     }
 }
