@@ -20,17 +20,17 @@ namespace PostMachine
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try { ThreadCount = Convert.ToInt32(textBox1.Text); } 
+            try { ThreadCount = Convert.ToInt32(textBox1.Text); }
             catch { ThreadCount = 1; }
 
-            for(int i = 0; i < ThreadCount; i++)
+            for (int i = 0; i < ThreadCount; i++)
             {
                 Thread thread = new Thread(new ParameterizedThreadStart(Driver.Start));
                 Threads.Add(thread);
                 thread.Start(i);
             }
         }
-         
+
         private void button2_Click(object sender, EventArgs e)
         {
             AddAccountForm addAccountForm = new AddAccountForm();
@@ -40,7 +40,9 @@ namespace PostMachine
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Forms.AddItemForm itemForm = new Forms.AddItemForm();
+            itemForm.Show();
+            this.Enabled = false;
         }
     }
 }

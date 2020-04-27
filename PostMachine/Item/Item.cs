@@ -28,6 +28,8 @@ namespace PostMachine
             this.Description = description;
             this.Price = price;
             this.Photos = photos.ToList();
+
+            Items.Add(this);
         }
     }
 }
