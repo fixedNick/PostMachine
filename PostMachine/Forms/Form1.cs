@@ -41,14 +41,14 @@ namespace PostMachine
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Forms.AddItemForm itemForm = new Forms.AddItemForm();
+            AddItemForm itemForm = new AddItemForm();
             itemForm.Show();
             this.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Forms.AddGroupForm groupForm = new Forms.AddGroupForm();
+            AddGroupForm groupForm = new AddGroupForm();
             groupForm.Show();
             this.Enabled = false;
         }
