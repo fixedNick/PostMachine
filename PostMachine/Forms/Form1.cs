@@ -10,6 +10,7 @@ namespace PostMachine
     {
         public static Form1 mainForm;
 
+        // Count of threads (drivers per launch)
         public static Int32 ThreadCount { get; private set; }
         private static List<Thread> Threads = new List<Thread>();
         public Form1()
