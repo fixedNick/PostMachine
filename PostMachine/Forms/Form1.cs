@@ -21,9 +21,14 @@ namespace PostMachine
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Sync Items to VkAccounts
+            Item.SyncItemsToAccounts();
+
+            // Getting thread count
             try { ThreadCount = Convert.ToInt32(textBox1.Text); }
             catch { ThreadCount = 1; }
 
+            // Starting drivers in different threads
             for (int i = 0; i < ThreadCount; i++)
             {
                 Thread thread = new Thread(new ParameterizedThreadStart(Driver.Start));

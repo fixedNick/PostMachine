@@ -33,7 +33,7 @@ namespace PostMachine
             Items.Add(this);
         }
 
-        public static void ConnectItemsToAccount()
+        public static void SyncItemsToAccounts()
         {
             foreach(var acc in VkAccount.Accounts)
             {
