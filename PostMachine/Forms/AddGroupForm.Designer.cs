@@ -1,4 +1,4 @@
-﻿namespace PostMachine.Forms
+﻿namespace PostMachine
 {
     partial class AddGroupForm
     {

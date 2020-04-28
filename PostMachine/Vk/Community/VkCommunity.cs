@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PostMachine
 {
-    class VkCommunity
+    public class VkCommunity
     {
         private static List<VkCommunity> Communities = new List<VkCommunity>();
         private static Int32 CurrentAvailableID = 0;

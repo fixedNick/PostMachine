@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace PostMachine.Forms
+namespace PostMachine
 {
     public partial class AddItemForm : Form
     {
