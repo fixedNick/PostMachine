@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PostMachine
 {
-    class Item
+    public class Item
     {
         private static List<Item> Items = new List<Item>();
         private static Int32 CurrentAvailableId = 0;
@@ -16,6 +16,7 @@ namespace PostMachine
         public string Description{ get; private set; }
         public double Price { get; private set; }
         public List<string> Photos { get; private set; } = new List<string>();
+        public VkAccount ConnectedAccount { get; private set; } = null;
         // TKey -> Community ID
         // TValue -> Last post time
         public Dictionary<Int32, DateTime> PostTime { get; private set; }
@@ -30,6 +31,25 @@ namespace PostMachine
             this.Photos = photos.ToList();
 
             Items.Add(this);
+        }
+
+        public static void ConnectItemsToAccount()
+        {
+            foreach(var acc in VkAccount.Accounts)
+            {
+                if(acc.ConnectedItem == null)
+                {
+                    foreach(var i in Items)
+                    {
+                        if(i.ConnectedAccount != null)
+                        {
+                            acc.ConnectItem(i);
+                            break;
+                        }
+                    }
+                }
+                    
+            }
         }
     }
 }

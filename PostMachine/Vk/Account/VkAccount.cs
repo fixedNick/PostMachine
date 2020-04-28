@@ -21,7 +21,7 @@ namespace PostMachine
         public string Login { get; private set; }
         public string Password { get; private set; }
         public Int32 id { get; private set; } = -1;
-        private List<Item> Items = new List<Item>();
+        public Item ConnectedItem { get; private set; } = null;
 
         public VkAccount() { }
 
@@ -33,5 +33,7 @@ namespace PostMachine
             account.id = CurrentAvailableID++;
             Accounts.Add(account);
         }
+
+        public void ConnectItem(Item item) => this.ConnectedItem = item;
     }
 }
